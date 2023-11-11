@@ -5,11 +5,11 @@
  *
  * @c: int
  *
- * Return: on success 1.
- * on error, -1 is returned, and errno is set appropriately
+ * Return: 1.
  */
 
 int _putchar(int c)
 {
-	return (write(1, &c, 1));
+	write(1, &c, 1);
+	return (1);
 }
