@@ -31,15 +31,15 @@ int _printf(const char *format, ...)
 		{
 			case 'c':
 				/* case of one char */
-				len += get_char(&ag);
+				len += print_char(&ag);
 				break;
 			case 's':
 				/* case of a string */
-				len += get_string(&ag);
+				len += print_string(&ag);
 				break;
 			case '%':
 				/* case of printing % */
-				len += get_percent();
+				len += print_percent();
 				break;
 		}
 	}
