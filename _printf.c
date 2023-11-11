@@ -16,36 +16,24 @@ int _printf(const char *format, ...)
 	{
 		if (!format || (format[0] == '%' && !format[1]))
 			return (-1);
+
 		if (format[i] != '%')
 		{
 			len += _putchar(format[i]);
 			continue;
 		}
+
 		for (j = 1; format[i + j] == ' '; ++j)
 			spaces++;
+
 		i += j - 1;
 		if (format[i + 1] == '\0')
 		{
 			len += _putchar(format[i]);
 			break;
 		}
-		switch (format[i + 1])
-		{
-			case 'c':
-				len += print_char(&ag, &i);
-				break;
-			case 's':
-				len += print_string(&ag, &i);
-				break;
-			case '%':
-				len += print_percent(&i);
-				break;
-			default:
-				len += _putchar('%');
-				if (spaces > 0)
-					len += _putchar(' ');
-				break;
-		}
+
+		switcher(format[i + 1], &len, &ag, &i, spaces);
 	}
 	va_end(ag);
 	return (len);
