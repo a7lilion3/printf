@@ -36,8 +36,7 @@ int _printf(const char *format, ...)
 				len += print_percent(&i);
 				break;
 			default:
-				len += print_percent(&i);
-				i--;
+				len += _putchar('%');
 				break;
 		}
 	}
