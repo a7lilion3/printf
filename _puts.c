@@ -2,23 +2,17 @@
 
 /**
  * _puts - prints a string
- *
- * @str: pointer to a char
- *
+ * @s: pointer to a char
  * Return: int nbr of characters printed
  */
-
 int _puts(char *s)
 {
-	int counter;
+	int i;
 
-	while (*str != '\0')
+	for (i = 0; s[i] != '\0'; ++i)
 	{
-		_putchar(*str + 0);
-		str++;
-		counter++;
+		_putchar(s[i]);
 	}
-	_putchar('\n');
 
-	return (counter);
+	return (i);
 }
