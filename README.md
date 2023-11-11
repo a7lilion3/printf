@@ -1,2 +1,2 @@
 # printf
-Implementing a printf clone
+Implementing a printf clone.
