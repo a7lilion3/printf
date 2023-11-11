@@ -16,14 +16,12 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			_putchar(format[i]);
-			++len;
+			len += _putchar(format[i]);
 			continue;
 		}
 		if (format[i + 1] == '\0')
 		{
-			_putchar(format[i]);
-			++len;
+			len += _putchar(format[i]);
 			break;
 		}
 		switch (format[i + 1])
@@ -39,7 +37,6 @@ int _printf(const char *format, ...)
 				break;
 			default:
 				print_percent(&i);
-				--i;
 				break;
 		}
 	}
