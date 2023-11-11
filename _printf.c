@@ -37,6 +37,7 @@ int _printf(const char *format, ...)
 				break;
 			default:
 				print_percent(&i);
+				i--;
 				break;
 		}
 	}
