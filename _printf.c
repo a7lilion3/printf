@@ -21,7 +21,11 @@ int _printf(const char *format, ...)
 			continue;
 		}
 		if (format[i + 1] == '\0')
+		{
+			_putchar(format[i]);
+			++len;
 			break;
+		}
 		switch (format[i + 1])
 		{
 			case 'c':
@@ -34,7 +38,8 @@ int _printf(const char *format, ...)
 				len += print_percent(&i);
 				break;
 			default:
-				len += print_percent(&i);
+				print_percent(&i);
+				--i;
 				break;
 		}
 	}
