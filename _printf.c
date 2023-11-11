@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 				break;
 			case '%':
 				/* case of printing % */
-				len += get_percent(&ag);
+				len += get_percent();
 				break;
 		}
 	}
