@@ -9,9 +9,9 @@ int _putchar(int c);
 int _puts(char *s);
 
 
-int print_char(va_list *ag);
-int print_string(va_list *ag);
-int print_percent();
+int print_char(va_list *ag, int *i);
+int print_string(va_list *ag, int *i);
+int print_percent(int *i);
 
 /* _printf prototype */
 int _printf(const char *format, ...);
