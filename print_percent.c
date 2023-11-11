@@ -2,7 +2,7 @@
 
 /**
  * print_percent - prints '%'
- * i: int *
+ * @i: int *
  * Return: 1
  */
 

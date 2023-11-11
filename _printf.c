@@ -40,6 +40,9 @@ int _printf(const char *format, ...)
 				/* case of printing % */
 				len += print_percent(&i);
 				break;
+			default:
+				i++;
+				break;
 		}
 	}
 	va_end(ag);
