@@ -9,6 +9,6 @@ int _putchar(int c);
 void _puts(char *s);
 
 /* _printf prototype */
-
+int _printf(const char *format, ...);
 
 #endif
