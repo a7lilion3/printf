@@ -7,10 +7,10 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, len;
+	int i, j, spaces, len;
 	va_list ag;
 
-	len = 0;
+	len = spaces = 0;
 	va_start(ag, format);
 	for (i = 0; format[i] != '\0'; ++i)
 	{
@@ -23,6 +23,9 @@ int _printf(const char *format, ...)
 			len += _putchar(format[i]);
 			continue;
 		}
+		for (j = 1; format[i + j] == ' '; ++j)
+			spaces++;
+		i += j - 1;
 		if (format[i + 1] == '\0')
 		{
 			len += _putchar(format[i]);
@@ -41,6 +44,8 @@ int _printf(const char *format, ...)
 				break;
 			default:
 				len += _putchar('%');
+				if (spaces > 0)
+					len += _putchar(' ');
 				break;
 		}
 	}
