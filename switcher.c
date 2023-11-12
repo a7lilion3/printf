@@ -19,6 +19,10 @@ void switcher(char c, int *len, va_list *ag, int *i, int spaces)
 		case 's':
 			*len += print_string(ag, i);
 			break;
+		case 'd':
+		case 'i':
+			*len += print_number(ag, i);
+			break;
 		case '%':
 			*len += print_percent(i);
 			break;
