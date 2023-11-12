@@ -14,6 +14,7 @@ int print_char(va_list *ag, int *i);
 int print_string(va_list *ag, int *i);
 int print_percent(int *i);
 
+void reverse(char *s);
 /* _printf prototype */
 int _printf(const char *format, ...);
 
