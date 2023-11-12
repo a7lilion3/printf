@@ -21,6 +21,11 @@ int print_number(va_list *ag, int *i)
 		len += _putchar('-');
 	}
 
+	if (n == 0)
+	{
+		return (_putchar('0'));
+	}
+
 	temp = n;
 	for (j = 0; temp /= 10; ++j)
 		;
