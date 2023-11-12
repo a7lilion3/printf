@@ -7,12 +7,10 @@
  */
 int _puts(char *s)
 {
-	int i;
+	int len = _strlen(s);
 
-	for (i = 0; s[i] != '\0'; ++i)
-	{
-		_putchar(s[i]);
-	}
+	while (*s)
+		_putchar(*s++);
 
-	return (i);
+	return (len);
 }
