@@ -16,6 +16,9 @@ int print_binary(va_list *ag, int *i)
 	len = 0;
 
 	n = va_arg(*ag, unsigned int);
+	if (n == 0)
+		return (_putchar('0'));
+
 	t = n;
 	for (j = 0; t; ++j)
 		t /= 2;
