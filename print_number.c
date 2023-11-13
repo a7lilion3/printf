@@ -24,10 +24,10 @@ int print_number(va_list *ag, int *i, int spaces)
 	else if (spaces > 0)
 	{
 		len += _putchar(' ');
-		if (n == 0)
-		{
-			return (_putchar('0'));
-		}
+	}
+	if (n == 0)
+	{
+		return (_putchar('0'));
 	}
 
 	temp = n;
