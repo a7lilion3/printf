@@ -19,6 +19,7 @@ int print_percent(int *i);
 
 void reverse(char *s);
 int _strlen(char *s);
+char *rot13(char *s);
 
 /* _printf prototype */
 int _printf(const char *format, ...);
