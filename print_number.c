@@ -31,8 +31,8 @@ int print_number(va_list *ag, int *i, int spaces)
 	}
 
 	temp = n;
-	for (j = 0; temp /= 10; ++j)
-		;
+	for (j = 0; temp; ++j)
+		temp /= 10;
 	res = malloc(j + 1);
 	if (res == NULL)
 		exit(-1);
