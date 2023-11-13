@@ -4,9 +4,10 @@
  * print_number - convert str to number and print it
  * @ag: va_list *
  * @i: int *
+ * @spaces: int
  * Return: i
  */
-int print_number(va_list *ag, int *i)
+int print_number(va_list *ag, int *i, int spaces)
 {
 	int len, n, temp, j;
 	char *res;
@@ -20,16 +21,19 @@ int print_number(va_list *ag, int *i)
 		n = -n;
 		len += _putchar('-');
 	}
-
-	if (n == 0)
+	else if (spaces > 0)
 	{
-		return (_putchar('0'));
+		len += _putchar(' ');
+		if (n == 0)
+		{
+			return (_putchar('0'));
+		}
 	}
 
 	temp = n;
 	for (j = 0; temp /= 10; ++j)
 		;
-	res = malloc(j);
+	res = malloc(j + 1);
 	if (res == NULL)
 		exit(-1);
 
