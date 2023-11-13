@@ -26,6 +26,9 @@ void switcher(char c, int *len, va_list *ag, int *i, int spaces)
 		case 'b':
 			*len += print_binary(ag, i);
 			break;
+		case 'r':
+			*len += print_reverse(ag, i);
+			break;
 		case '%':
 			*len += print_percent(i);
 			break;
