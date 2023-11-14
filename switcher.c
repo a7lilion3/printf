@@ -29,6 +29,9 @@ void switcher(char c, int *len, va_list *ag, int *i, int spaces)
 		case 'r':
 			*len += print_reverse(ag, i);
 			break;
+		case 'R':
+			*len += print_rot13(ag, i);
+			break;
 		case '%':
 			*len += print_percent(i);
 			break;
